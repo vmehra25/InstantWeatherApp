@@ -12,7 +12,7 @@ interface WeatherLocalDataSource {
 
     suspend fun deleteAllWeather()
 
-    suspend fun insertWeatherForecast(dbWeatherForecast: DBWeatherForecast)
+    suspend fun insertWeatherForecast(dbWeatherForecast: List<DBWeatherForecast>)
 
     suspend fun getAllWeatherForecast(): List<DBWeatherForecast>
 

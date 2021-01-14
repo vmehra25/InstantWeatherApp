@@ -27,8 +27,8 @@ class WeatherLocalDataSourceImpl(
         weatherDao.deleteAllWeather()
     }
 
-    override suspend fun insertWeatherForecast(dbWeatherForecast: DBWeatherForecast) = withContext(ioDispatcher){
-        weatherDao.insertWeatherForecast(dbWeatherForecast)
+    override suspend fun insertWeatherForecast(dbWeatherForecast: List<DBWeatherForecast>) = withContext(ioDispatcher){
+        weatherDao.insertWeatherForecast(*dbWeatherForecast.toTypedArray())
     }
 
     override suspend fun getAllWeatherForecast(): List<DBWeatherForecast> = withContext(ioDispatcher){

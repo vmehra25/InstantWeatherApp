@@ -14,7 +14,7 @@ interface WeatherRepository {
 
     suspend fun insertWeather(weather: Weather)
 
-    suspend fun insertForecastWeather(weatherForecast: WeatherForecast)
+    suspend fun insertForecastWeather(weatherForecastList: List<WeatherForecast>)
 
     suspend fun deleteWeatherData()
 
